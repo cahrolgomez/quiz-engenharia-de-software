@@ -65,27 +65,206 @@
 
 <script>
 const quiz = [
-  { pergunta: "O que são as etapas de projeto e implementação no desenvolvimento de software?", alternativas: ["Fases de testes e validação do sistema","Estágios onde o software executável é desenvolvido","Processos de manutenção e suporte","Atividades exclusivas de documentação"], resposta: 1 },
-  { pergunta: "O que significa a intercalação no processo de desenvolvimento?", alternativas: ["Separação total entre projeto e implementação","Execução apenas da implementação","Projeto e implementação influenciam-se mutuamente","Uso de múltiplas linguagens"], resposta: 2 },
-  { pergunta: "O que é o projeto de software?", alternativas: ["Execução do código","Testes automatizados","Atividade criativa de identificar componentes e relações","Instalação do sistema"], resposta: 2 },
-  { pergunta: "O que caracteriza um sistema orientado a objetos?", alternativas: ["Uso de funções","Objetos sem interação","Objetos interativos com estado próprio","Apenas dados"], resposta: 2 },
-  { pergunta: "Qual é a primeira etapa do projeto orientado a objetos?", alternativas: ["Identificar objetos","Projetar arquitetura","Definir contexto e interações","Especificar interfaces"], resposta: 2 },
-  { pergunta: "Qual é o objetivo da arquitetura de software?", alternativas: ["Criar testes","Organizar componentes","Executar software","Documentar requisitos"], resposta: 1 },
-  { pergunta: "O que a análise gramatical ajuda a identificar?", alternativas: ["Erros de código","Substantivos e verbos","Banco de dados","Interfaces"], resposta: 1 },
-  { pergunta: "O que os modelos estruturais da UML descrevem?", alternativas: ["Comportamento","Fluxo","Estrutura estática","Testes"], resposta: 2 },
-  { pergunta: "Qual diagrama mostra interações?", alternativas: ["Classe","Estado","Sequência","Componentes"], resposta: 2 },
-  { pergunta: "O que é um padrão de projeto?", alternativas: ["Código pronto","Linguagem","Solução reutilizável","Teste"], resposta: 2 },
-  { pergunta: "Elemento de um padrão?", alternativas: ["Código","Compilador","Problema","Hardware"], resposta: 2 },
-  { pergunta: "O que faz o Observer?", alternativas: ["Controla versões","Notifica mudanças","Compila código","Testa"], resposta: 1 },
-  { pergunta: "Objetivo do reúso?", alternativas: ["Aumentar tempo","Reduzir custos","Evitar libs","Criar código maior"], resposta: 1 },
-  { pergunta: "Gerenciamento de versões?", alternativas: ["Executa","Controla edições","Cria interface","Testa"], resposta: 1 },
-  { pergunta: "O que é Host?", alternativas: ["Executa","Desenvolve","Armazena","Usuário"], resposta: 1 },
-  { pergunta: "Característica da GPL?", alternativas: ["Fechado","Open source obrigatório","Sem modificação","Empresa"], resposta: 1 },
-  { pergunta: "O que a BSD permite?", alternativas: ["Acadêmico","Gratuito","Proprietário","Sem modificação"], resposta: 2 },
-  { pergunta: "Qual é o objetivo de especificar interfaces no projeto orientado a objetos?", alternativas: ["Definir o design visual do sistema","Permitir que o desenvolvimento ocorra em paralelo","Executar o software automaticamente","Criar banco de dados"], resposta: 1 },
-  { pergunta: "O que descrevem os modelos dinâmicos na UML?", alternativas: ["A estrutura estática do sistema","O armazenamento de dados","O comportamento e as interações ao longo do tempo","A organização dos arquivos"], resposta: 2 },
-  { pergunta: "O que é integração de sistemas no gerenciamento de configuração?", alternativas: ["Criação de interfaces gráficas","Definição de quais versões compõem o sistema final","Execução de testes automatizados","Desenvolvimento de código"], resposta: 1 }
-
+  {
+    pergunta: "O que caracteriza o estágio de projeto e implementação em sistemas grandes?",
+    alternativas: [
+      "É a única fase do desenvolvimento de software.",
+      "É uma parte de um conjunto de processos como engenharia de requisitos e validação.",
+      "Ocorre totalmente antes da definição de requisitos.",
+      "Não possui ligação com a atividade de validação."
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "Qual é a definição de 'Projeto de Software' segundo o guia?",
+    alternativas: [
+      "Processo de concretizar o projeto como um programa executável.",
+      "Atividade de teste de estresse do sistema.",
+      "Atividade criativa onde se identificam componentes e seus relacionamentos.",
+      "Documentação de manuais de usuário."
+    ],
+    resposta: 2
+  },
+  {
+    pergunta: "O que significa a 'Intercalação' no processo de desenvolvimento?",
+    alternativas: [
+      "As atividades de projeto e implementação estão ligadas e influenciam-se mutuamente.",
+      "O projeto deve ser finalizado antes de iniciar a implementação.",
+      "A implementação substitui a necessidade de projeto.",
+      "As atividades são isoladas para evitar erros."
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: "No OOD, o que é essencial para estabelecer os limites do sistema?",
+    alternativas: [
+      "Identificar objetos tangíveis.",
+      "Desenvolver modelos de projeto.",
+      "Definir o contexto e as interações com o ambiente externo.",
+      "Especificar as interfaces de usuário."
+    ],
+    resposta: 2
+  },
+  {
+    pergunta: "Qual etapa do OOD envolve a organização de componentes em camadas ou cliente-servidor?",
+    alternativas: [
+      "Identificar Objetos.",
+      "Projetar a Arquitetura.",
+      "Especificar Interfaces.",
+      "Análise Gramatical."
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "O que é a 'Análise Gramatical' na identificação de objetos?",
+    alternativas: [
+      "Revisão de erros ortográficos no código.",
+      "Identificação de substantivos (objetos) e verbos (operações) na descrição do sistema.",
+      "Tradução do código para outra linguagem.",
+      "Criação de manuais técnicos."
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "Quais são exemplos de 'Entidades Tangíveis'?",
+    alternativas: [
+      "Apenas códigos de erro.",
+      "Aviões, sensores ou papéis como médico e gerente.",
+      "Apenas classes abstratas.",
+      "Diagramas de sequência e de estado."
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "Para que serve a especificação de interfaces no projeto?",
+    alternativas: [
+      "Para definir o design visual do aplicativo.",
+      "Para que o desenvolvimento possa ocorrer de forma paralela.",
+      "Para substituir o diagrama de classes.",
+      "Para limitar o número de objetos no sistema."
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "Qual modelo UML descreve a estrutura estática e relacionamentos?",
+    alternativas: [
+      "Modelos Dinâmicos.",
+      "Diagramas de Sequência.",
+      "Modelos Estruturais (como Diagramas de Classe).",
+      "Máquinas de Estado."
+    ],
+    resposta: 2
+  },
+  {
+    pergunta: "O que mostra um 'Diagrama de Sequência'?",
+    alternativas: [
+      "A hierarquia de herança das classes.",
+      "A sequência de interações de objetos em uma solicitação.",
+      "A estrutura de pastas do projeto.",
+      "A lista de bugs encontrados no sistema."
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "Qual diagrama UML foca em mudanças de estado em resposta a eventos?",
+    alternativas: [
+      "Diagrama de Classe.",
+      "Diagrama de Subsistema.",
+      "Diagrama de Estado.",
+      "Diagrama de Requisitos."
+    ],
+    resposta: 2
+  },
+  {
+    pergunta: "Quais são os 4 elementos fundamentais de um Padrão de Projeto (Design Pattern)?",
+    alternativas: [
+      "Input, Processo, Output, Feedback.",
+      "Nome, Problema, Solução e Consequências.",
+      "Objeto, Classe, Herança, Polimorfismo.",
+      "Host, Target, IDE, Compilador."
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "Qual a principal função do padrão 'Observer'?",
+    alternativas: [
+      "Proteger o código contra acessos não autorizados.",
+      "Separar a exibição do estado de um objeto do objeto em si.",
+      "Gerenciar a conexão com o banco de dados.",
+      "Traduzir o código para a máquina alvo."
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "O que acontece quando o estado de um objeto muda no padrão Observer?",
+    alternativas: [
+      "O sistema é reiniciado.",
+      "O código é compilado novamente.",
+      "Todos os observadores são automaticamente notificados e atualizados.",
+      "O objeto é deletado da memória."
+    ],
+    resposta: 2
+  },
+  {
+    pergunta: "Quais são os níveis de reúso de software mencionados no guia?",
+    alternativas: [
+      "Iniciante, Intermediário e Avançado.",
+      "Abstração, Objeto, Componente e Sistema.",
+      "Local, Regional e Global.",
+      "Hardware e Software."
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "No gerenciamento de configuração, o que faz o 'Gerenciamento de Versões'?",
+    alternativas: [
+      "Define o preço final do software.",
+      "Controla edições concorrentes de componentes.",
+      "Cria o design das interfaces.",
+      "Monitora o desempenho do processador."
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "Qual a diferença entre Host e Target?",
+    alternativas: [
+      "Host é o servidor web, Target é o banco de dados.",
+      "Host é onde se desenvolve (com IDE), Target é onde o software executa.",
+      "Não há diferença entre eles.",
+      "Host é o programador, Target é o cliente."
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "Como funciona a licença GPL (Geral Pública)?",
+    alternativas: [
+      "É uma licença reciprocra: se usar código GPL, seu software final deve ser open source.",
+      "Permite incluir código em sistemas proprietários sem abrir a fonte.",
+      "É uma licença paga para uso comercial.",
+      "Não permite que o código seja lido por voluntários."
+    ],
+    resposta: 0
+  },
+  {
+    pergunta: "O que a licença LGPL permite que a GPL padrão não permite?",
+    alternativas: [
+      "Vender o software por qualquer preço.",
+      "Linkar componentes com código proprietário sem abrir a fonte destes.",
+      "Proibir alterações no código original.",
+      "Usar o código apenas em pesquisas acadêmicas."
+    ],
+    resposta: 1
+  },
+  {
+    pergunta: "Qual licença permite incluir código em sistemas proprietários vendidos comercialmente?",
+    alternativas: [
+      "GPL.",
+      "LGPL.",
+      "BSD.",
+      "Open Source restrita."
+    ],
+    resposta: 2
+  }
 ];
 
 let current = 0;
@@ -94,7 +273,10 @@ let answered = false;
 
 function loadQuestion() {
   const q = quiz[current];
-  document.getElementById("question").innerText = q.pergunta;
+
+  document.getElementById("question").innerText =
+    `(${current + 1}/${quiz.length}) ${q.pergunta}`;
+
   const optionsDiv = document.getElementById("options");
   optionsDiv.innerHTML = "";
 
@@ -105,6 +287,7 @@ function loadQuestion() {
     btn.onclick = () => selectOption(index, btn);
     optionsDiv.appendChild(btn);
   });
+
   answered = false;
 }
 
